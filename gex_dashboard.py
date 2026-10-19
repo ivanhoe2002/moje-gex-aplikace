@@ -11,8 +11,7 @@ st.markdown("Tato aplikace stahuje bezplatná opční data z Yahoo Finance a po�
 
 ticker_symbol = "QQQ"
 
-@st.cache_resource
-(ttl=3600)
+@st.cache_resource(ttl=3600)
 def load_options_data(ticker):
     tk = yf.Ticker(ticker)
     expirations = tk.options
