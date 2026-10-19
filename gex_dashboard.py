@@ -1,7 +1,3 @@
-Skvělé, váš původní kód je velmi čistě napsaný. Upravil jsem ho přesně tak, aby všechny výpočty na pozadí dál běžely z robustních opčních dat QQQ, ale uživatelské rozhraní, graf a vypočítané hladiny se automaticky přepočítaly na ekvivalent futures kontraktu MNQ.
-Aplikace si nově stáhne i aktuální cenu Micro E-mini Nasdaq futures (MNQ=F) z Yahoo Finance a spočítá přesný koeficient převodu, takže hladiny budou perfektně sedět i v případě intradenních pohybů.
-Zde je kompletní upravený kód. Celý ho zkopírujte a přepište jím obsah souboru gex_dashboard.py na vašem GitHubu:
-python
 import streamlit as st
 import yfinance as yf
 import pandas as pd
@@ -152,5 +148,3 @@ else:
     
     st.plotly_chart(fig, use_container_width=True)
     st.info("Tip pro MNQ trading: Sledujte, jak se ranní hladiny kryjí s POC nebo VAL/VAH na vašem Volume Profilu v platformě TradingView.")
-Při použití kódu buďte obezřetní.
-
